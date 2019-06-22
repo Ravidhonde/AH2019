@@ -1,13 +1,13 @@
 let handleFail = function(err){
     console.log("Error : ", err);
 };
-let remoteContainer= document.getElementById("remote-container");
+let remoteContainer= document.getElementById("rc");
 let client = AgoraRTC.createClient({
     mode: 'live',
     codec: "h264"
 });
-client.init("019304ec2f234cb6b3d4f3871c8517dc",() => console.log("AgoraRTC client initialized") ,handleFail);
-client.join(<token key>,"channel1",null, (uid)=>{
+client.init("6e84c9035a1147429a7e2ec1fdf3ca82",() => console.log("AgoraRTC client initialized") ,handleFail);
+client.join(0066e84c9035a1147429a7e2ec1fdf3ca82IAAyMElPO/1G0JbOA2Rw2Mh3BuzCB+QzfFIXlIbfVu65GJ8YTssAAAAAEAAapIRrr7gPXQEAAQCXuA9d,"agorahack",null, (uid)=>{
     let localStream = AgoraRTC.createStream({
         streamID: uid,
         audio: true,
